@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+*{
+  margin: 0;
+}
+.top-grey{
+  width: 100%;
+  height: 22rem;
+  background: linear-gradient(to bottom, #636363, #c6c6c6);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.top-grey h1{
+  color: white;
+  margin-left: 2rem;
+  position: relative;
+  font-size: 7rem;
+  top: 113%;
+  transform: translateY(-113%);
+}
+
+.bottom-white .login{
+  width: 50%;
+  float: right;
+}
+
+.bottom-white .login input{
+  width: 15rem;
+	height: 2.2rem;
+  margin-left: 3rem;
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: #d2d2d2;
+  /* width: 7rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid lightslategrey;
+  outline: none;
+  border-radius: 3px; */
+}
+
+.bottom-white .login input:first-child{
+  margin-top: 4rem;
+}
+
+.bottom-white .login input::-webkit-input-placeholder{
+  color: #d2d2d2;
+}
+
+.bottom-white .login input:focus{
+  outline: none;
+}
+
+.bottom-white .login button{
+  margin-left: 3rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: #d2d2d2;
+  width: 8rem;
+	height: 3rem;
+	border-radius: 8px;
+	background-color: #6e6e6e;
+  cursor: pointer;
+}
+.bottom-white .login button:focus{
+  outline: none;
+}
+
+.bottom-white .login .dummy{
+  text-align: center;
+}
