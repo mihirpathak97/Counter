@@ -1,3 +1,4 @@
 node_modules
-assets
+cold_assets
 .DS_Store
+release-builds
