@@ -2,37 +2,55 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Counter</title>
     <link rel="stylesheet" href="styles/home.css">
   </head>
+
   <body>
+
+  <!-- Side Menu -->
+
     <div class="user">
       <img src="nobody.png" alt="" class="user-profile">
       <p class="user-name" id="display-name"></p>
       <p class="conntections">Connected Devices: <span id="devices"></span></p>
       <div class="wrapper">
-        <button type="button" name="button">Logout</button>
+        <button type="button" name="button" onclick="signOut()">Logout</button>
       </div>
     </div>
 
-    <div class="box">
-      <div class="item">
-        <div class="count-wrapper">
-          <h1 class="count">53</h1>
+  <!-- Modal for Creating a Counter -->
+
+    <div class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <div onclick="document.getElementsByClassName('w3-modal')[0].style.display='none'" class="close-wrapper">
+          <span>X</span>
         </div>
-        <h2 class="name">Apple</h2>
-        <div class="buttons">
-          <div class="button-wrapper">
-            <button type="button" name="button">+</button>
-          </div>
-          <div class="button-wrapper">
-            <button type="button" name="button">-</button>
-          </div>
+        <div class="content">
+          <input type="text" name="token" value="" id="newCounterItem" placeholder="Counter Name">
+          <input type="submit" name="" id="newCounterItemSubmit" value="Add!">
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Counter Area -->
+
+    <div class="box">
+      <br><br><br><br><br>
+    </div>
+
+  <!-- Floating Red Button -->
+
+    <div class="add-button-wrapper">
+      <button type="button" name="button" id="addItem">+</button>
     </div>
 
   </body>
+
+  <!-- Include jQuery -->
+
   <script>window.$ = window.jQuery = require('jquery');</script>
   <script src="js/home.js" charset="utf-8"></script>
 </html>

@@ -1,10 +1,18 @@
+/* Google Fonts */
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+/* Global Selector : Electron */
+
 *{
   margin: 0;
   font-family: 'Work Sans', sans-serif;
 }
+
+/* Side Menu */
+
 .user{
-  position: absolute;
+  position: fixed;
   width: 30%;
   background: linear-gradient(to bottom, #636363, #c6c6c6);
   height: 100%;
@@ -48,7 +56,10 @@
   outline: none;
   border: none;
   margin-top: 15rem;
+  cursor: pointer;
 }
+
+/* Counter Area */
 
 .box{
   position: absolute;
@@ -58,6 +69,8 @@
   height: 100%;
   text-align: center;
 }
+
+/* Counter Item */
 
 .box .item{
   position: relative;
@@ -69,6 +82,12 @@
   border-radius: 20px;
 	background-image: linear-gradient(to left, #8effe1, #28c3c9);
 	box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* Counter Item Spacing */
+
+.box .item:last-child{
+  margin-bottom: 10rem;
 }
 
 .box .item .count-wrapper{
@@ -112,4 +131,156 @@
   font-size: 2rem;
   margin-top: 0px;
   font-weight: bolder;
+  cursor: pointer;
+}
+
+/* Floating Red Button */
+
+.add-button-wrapper{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: red;
+  box-shadow: 1px 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.add-button-wrapper button{
+  display: block;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  color: white;
+  vertical-align: center;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+
+/* Modal */
+
+.w3-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Work Sans', sans-serif !important;
+}
+.w3-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px;
+    overflow: auto;
+    box-shadow: 1px 0 6px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.w3-modal .w3-modal-content .close-wrapper{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background: red;
+}
+
+.w3-modal .w3-modal-content .close-wrapper span{
+  color: white;
+  font-weight: bolder;
+}
+
+.w3-modal .w3-modal-content .content{
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.w3-modal .w3-modal-content .content input[type="text"] {
+  width: 15rem;
+  height: 2.2rem;
+  margin-left: 3rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: #d2d2d2;
+  margin: 2rem auto;
+}
+.w3-modal .w3-modal-content .content input[type="text"]:focus {
+    outline: none;
+}
+.w3-modal .w3-modal-content .content input[type="submit"]{
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: white;
+  width: 8rem;
+	height: 3rem;
+	border-radius: 8px;
+	background-color: red;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+@media (max-width:600px) {
+    .w3-modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .w3-modal {
+        padding-top: 30px
+    }
+}
+
+@media (max-width:768px) {
+    .w3-modal-content {
+        width: 500px
+    }
+    .w3-modal {
+        padding-top: 50px
+    }
+}
+@media (min-width:993px) {
+    .w3-modal-content {
+        width: 900px
+    }
+    .w3-hide-large {
+        display: none!important
+    }
+    .w3-sidebar.w3-collapse {
+        display: block!important
+    }
 }
