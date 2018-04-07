@@ -1,7 +1,15 @@
+/* Google Fonts */
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+/* Global Selector : Electron */
+
 *{
   margin: 0;
 }
+
+/* Login Page Upper Half */
+
 .top-grey{
   width: 100%;
   height: 22rem;
@@ -10,6 +18,8 @@
   font-weight: 700;
   overflow: hidden;
 }
+
+/* Counter Title */
 
 .top-grey h1{
   color: white;
@@ -20,10 +30,25 @@
   transform: translateY(-113%);
 }
 
+/* Counter App SVG */
+
+.top-grey img{
+  width: 120px;
+  color: white;
+  margin-left: 31rem;
+  position: absolute;
+  margin-top: 7.5rem;
+  z-index: 3;
+}
+
+/* Login Page Lower Half */
+
 .bottom-white .login{
   width: 50%;
   float: right;
 }
+
+/* Auth Text Boxes */
 
 .bottom-white .login input{
   width: 15rem;
@@ -57,16 +82,17 @@
   outline: none;
 }
 
+/* Auth Buttons */
+
 .bottom-white .login button{
-  margin-left: 3rem;
   border-radius: 8px;
   background-color: #ffffff;
   border: solid 1px #707070;
-  display: block;
+  display: inline;
   margin-bottom: 1.3rem;
   padding: 7px;
   font-size: 18px;
-  color: #d2d2d2;
+  color: #ffffff;
   width: 8rem;
 	height: 3rem;
 	border-radius: 8px;
@@ -77,6 +103,132 @@
   outline: none;
 }
 
-.bottom-white .login .dummy{
+.bottom-white .login .auth{
+  width: 20rem;
+  display: block;
+  margin: auto;
+  margin-right: 17rem;
+}
+
+.bottom-white .login .auth button:last-child{
+  background: red;
+  border: none;
+}
+
+/* Modal */
+.w3-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Work Sans', sans-serif !important;
+}
+.w3-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px;
+    overflow: auto;
+    box-shadow: 1px 0 6px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.w3-modal .w3-modal-content .close-wrapper{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   text-align: center;
+  cursor: pointer;
+  background: red;
+}
+
+.w3-modal .w3-modal-content .close-wrapper span{
+  color: white;
+  font-weight: bolder;
+}
+
+.w3-modal .w3-modal-content .content{
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.w3-modal .w3-modal-content .content input[type="text"], .w3-modal .w3-modal-content .content input[type="password"] {
+  width: 15rem;
+  height: 2.2rem;
+  margin-left: 3rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: #d2d2d2;
+  margin: 2rem auto;
+}
+.w3-modal .w3-modal-content .content input[type="text"]:focus, .w3-modal .w3-modal-content .content input[type="password"]:focus {
+    outline: none;
+}
+.w3-modal .w3-modal-content .content input[type="submit"]{
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: solid 1px #707070;
+  display: block;
+  margin-bottom: 1.3rem;
+  padding: 7px;
+  font-size: 18px;
+  color: white;
+  width: 8rem;
+	height: 3rem;
+	border-radius: 8px;
+	background-color: red;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+@media (max-width:600px) {
+    .w3-modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .w3-modal {
+        padding-top: 30px
+    }
+}
+
+@media (max-width:768px) {
+    .w3-modal-content {
+        width: 500px
+    }
+    .w3-modal {
+        padding-top: 50px
+    }
+}
+@media (min-width:993px) {
+    .w3-modal-content {
+        width: 900px
+    }
+    .w3-hide-large {
+        display: none!important
+    }
+    .w3-sidebar.w3-collapse {
+        display: block!important
+    }
 }

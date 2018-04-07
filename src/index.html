@@ -6,20 +6,50 @@
     <title>Login</title>
     <link rel="stylesheet" href="styles/index.css">
   </head>
+
   <body>
+
+    <!-- Icon on login screen -->
+
     <div class="top-grey">
       <h1>Counter</h1>
+      <img src="../assets/Counter.svg" alt="">
     </div>
+
+  <!-- Sign up for modal -->
+
+    <div class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <div onclick="document.getElementsByClassName('w3-modal')[0].style.display='none'" class="close-wrapper">
+          <span>X</span>
+        </div>
+        <div class="content">
+          <input type="text" name="name" value="" id="signupName" placeholder="Your Name">
+          <input type="text" name="email" value="" id="signupEmail" placeholder="E-mail">
+          <input type="password" name="password" value="" id="signupPassword" placeholder="Password">
+          <input type="submit" name="" id="signupSubmit" value="Sign Up!">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Input boxes -->
+
     <div class="bottom-white">
       <div class="login">
-        <input type="text" name="username" value="" id="username" placeholder="Username">
+        <input type="text" name="email" value="" id="username" placeholder="E-mail ID">
         <input type="password" name="password" value="" id="password" placeholder="Password">
-        <div class="dummy">
+        <div class="auth">
           <button type="button" onclick="authCheck()" name="button">Login</button>
+          <button type="button" id="signup" name="button">Signup</button>
         </div>
       </div>
     </div>
   </body>
+
+  <!-- Include jQuery -->
+
   <script>window.$ = window.jQuery = require('jquery');</script>
   <script src="js/index.js" charset="utf-8"></script>
 </html>
