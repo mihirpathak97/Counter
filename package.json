@@ -1,7 +1,9 @@
 {
   "name": "Counter",
   "version": "1.0.0",
-  "description": "A cloud based counter",
+  "description": "A cloud based counter application",
+  "author": "Z-Coders",
+  "license": "MIT license",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -34,7 +36,6 @@
       "icon": "build/icon.ico"
     }
   },
-  "author": "",
   "devDependencies": {
     "electron": "^1.8.4",
     "electron-builder": "^20.8.1",
