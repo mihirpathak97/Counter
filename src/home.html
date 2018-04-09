@@ -8,8 +8,6 @@
 
   <body>
 
-  <!-- Side Menu -->
-
     <div class="user">
       <img src="nobody.png" alt="" class="user-profile">
       <p class="user-name" id="display-name"></p>
@@ -19,37 +17,29 @@
       </div>
     </div>
 
-  <!-- Modal for Creating a Counter -->
-
     <div class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <div onclick="document.getElementsByClassName('w3-modal')[0].style.display='none'" class="close-wrapper">
-          <span>X</span>
-        </div>
-        <div class="content">
-          <input type="text" name="token" value="" id="newCounterItem" placeholder="Counter Name">
-          <input type="submit" name="" id="newCounterItemSubmit" value="Add!">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <div onclick="document.getElementsByClassName('w3-modal')[0].style.display='none'" class="close-wrapper">
+            <span>X</span>
+          </div>
+          <div class="content">
+            <input type="text" name="token" value="" id="newCounterItem" placeholder="Counter Name">
+            <input type="submit" name="" id="newCounterItemSubmit" value="Add!">
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Counter Area -->
 
     <div class="box">
       <br><br><br><br><br>
     </div>
-
-  <!-- Floating Red Button -->
 
     <div class="add-button-wrapper">
       <button type="button" name="button" id="addItem">+</button>
     </div>
 
   </body>
-
-  <!-- Include jQuery -->
 
   <script>window.$ = window.jQuery = require('jquery');</script>
   <script src="js/home.js" charset="utf-8"></script>
