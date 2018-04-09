@@ -4,7 +4,12 @@
   "description": "A cloud based counter",
   "main": "main.js",
   "scripts": {
-    "dist": "build"
+    "start": "electron .",
+    "build": "build",
+    "build-all": "build -mwl",
+    "build-linux": "build --linux",
+    "build-win": "build --win",
+    "build-mac": "build --mac"
   },
   "build": {
     "dmg": {
@@ -22,10 +27,7 @@
       ]
     },
     "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
+      "target": "deb"
     },
     "win": {
       "target": "nsis",
